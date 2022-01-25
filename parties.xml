@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="parties.xsl" ?>
+<parties>
+  <partie nom="TtcSh">
+    <personnages>
+      <personnage id="robin" couleur="vert" nom="Robin des Bois" utilise="1" pioche="0"/>
+      <personnage id="marianne" couleur="jaune" nom="Belle Marianne" utilise="1" pioche="0"/>
+      <personnage id="jean" couleur="bleu" nom="Petit Jean" utilise="1" pioche="0"/>
+      <personnage id="will" couleur="turquoise" nom="Will Scarlet" utilise="0" pioche="0"/>
+    </personnages>
+    <disques dernier="robin">
+      <disque id="rouge" couleur="rouge" utilise="1" pioche="0"/>
+      <disque id="blanc" couleur="blanc" utilise="0" pioche="0"/>
+      <disque id="gris1" couleur="gris" utilise="0" pioche="0"/>
+      <disque id="gris2" couleur="gris" utilise="0" pioche="0"/>
+      <disque id="violet1" couleur="violet" utilise="0" pioche="0"/>
+      <disque id="violet2" couleur="violet" utilise="0" pioche="0"/>
+    </disques>
+    <cubes dernier="violet">
+      <cube id="violet" utilise="5"/>
+      <cube id="blanc" utilise="3"/>
+    </cubes>
+  </partie>
+  <partie nom="izXUZ">
+    <personnages>
+      <personnage id="robin" couleur="vert" nom="Robin des Bois" utilise="1" pioche="0"/>
+      <personnage id="marianne" couleur="jaune" nom="Belle Marianne" utilise="1" pioche="0"/>
+      <personnage id="jean" couleur="bleu" nom="Petit Jean" utilise="1" pioche="0"/>
+      <personnage id="will" couleur="turquoise" nom="Will Scarlet" utilise="0" pioche="0"/>
+    </personnages>
+    <disques dernier="rouge">
+      <disque id="rouge" couleur="rouge" utilise="1" pioche="1"/>
+      <disque id="blanc" couleur="blanc" utilise="0" pioche="0"/>
+      <disque id="gris1" couleur="gris" utilise="0" pioche="0"/>
+      <disque id="gris2" couleur="gris" utilise="0" pioche="0"/>
+      <disque id="violet1" couleur="violet" utilise="0" pioche="0"/>
+      <disque id="violet2" couleur="violet" utilise="0" pioche="0"/>
+    </disques>
+    <cubes dernier="blanc">
+      <cube id="violet" utilise="2"/>
+      <cube id="blanc" utilise="2"/>
+    </cubes>
+  </partie>
+  <partie nom="7638D">
+    <personnages>
+      <personnage id="robin" couleur="vert" nom="Robin des Bois" utilise="0" pioche="0"/>
+      <personnage id="marianne" couleur="jaune" nom="Belle Marianne" utilise="0" pioche="0"/>
+      <personnage id="jean" couleur="bleu" nom="Petit Jean" utilise="0" pioche="0"/>
+      <personnage id="will" couleur="turquoise" nom="Will Scarlet" utilise="0" pioche="0"/>
+    </personnages>
+    <disques dernier="">
+      <disque id="rouge" couleur="rouge" utilise="0" pioche="0"/>
+      <disque id="blanc" couleur="blanc" utilise="0" pioche="0"/>
+      <disque id="gris1" couleur="gris" utilise="0" pioche="0"/>
+      <disque id="gris2" couleur="gris" utilise="0" pioche="0"/>
+      <disque id="violet1" couleur="violet" utilise="0" pioche="0"/>
+      <disque id="violet2" couleur="violet" utilise="0" pioche="0"/>
+    </disques>
+    <cubes dernier="">
+      <cube id="violet" utilise="0"/>
+      <cube id="blanc" utilise="0"/>
+    </cubes>
+  </partie>
+  <partie nom="itBBe">
+    <personnages>
+      <personnage id="robin" couleur="vert" nom="Robin des Bois" utilise="1" pioche="1"/>
+      <personnage id="marianne" couleur="jaune" nom="Belle Marianne" utilise="1" pioche="1"/>
+      <personnage id="jean" couleur="bleu" nom="Petit Jean" utilise="1" pioche="1"/>
+      <personnage id="will" couleur="turquoise" nom="Will Scarlet" utilise="1" pioche="1"/>
+    </personnages>
+    <disques dernier="marianne">
+      <disque id="rouge" couleur="rouge" utilise="1" pioche="0"/>
+      <disque id="blanc" couleur="blanc" utilise="0" pioche="0"/>
+      <disque id="gris1" couleur="gris" utilise="1" pioche="0"/>
+      <disque id="gris2" couleur="gris" utilise="0" pioche="0"/>
+      <disque id="violet1" couleur="violet" utilise="0" pioche="0"/>
+      <disque id="violet2" couleur="violet" utilise="0" pioche="0"/>
+    </disques>
+    <cubes dernier="">
+      <cube id="violet" utilise="0"/>
+      <cube id="blanc" utilise="1"/>
+    </cubes>
+  </partie>
+  <partie nom="3C44a">
+    <personnages>
+      <personnage id="robin" couleur="vert" nom="Robin des Bois" utilise="1" pioche="0"/>
+      <personnage id="marianne" couleur="jaune" nom="Belle Marianne" utilise="1" pioche="1"/>
+      <personnage id="jean" couleur="bleu" nom="Petit Jean" utilise="1" pioche="0"/>
+      <personnage id="will" couleur="turquoise" nom="Will Scarlet" utilise="1" pioche="0"/>
+    </personnages>
+    <disques dernier="rouge">
+      <disque id="rouge" couleur="rouge" utilise="1" pioche="1"/>
+      <disque id="blanc" couleur="blanc" utilise="0" pioche="0"/>
+      <disque id="gris1" couleur="gris" utilise="1" pioche="0"/>
+      <disque id="gris2" couleur="gris" utilise="0" pioche="0"/>
+      <disque id="violet1" couleur="violet" utilise="0" pioche="0"/>
+      <disque id="violet2" couleur="violet" utilise="0" pioche="0"/>
+    </disques>
+    <cubes dernier="">
+      <cube id="violet" utilise="0"/>
+      <cube id="blanc" utilise="0"/>
+    </cubes>
+  </partie>
+  <partie nom="CUPQg">
+    <personnages>
+      <personnage id="robin" couleur="vert" nom="Robin des Bois" utilise="0" pioche="0"/>
+      <personnage id="marianne" couleur="jaune" nom="Belle Marianne" utilise="0" pioche="0"/>
+      <personnage id="jean" couleur="bleu" nom="Petit Jean" utilise="0" pioche="0"/>
+      <personnage id="will" couleur="turquoise" nom="Will Scarlet" utilise="0" pioche="0"/>
+    </personnages>
+    <disques dernier="">
+      <disque id="rouge" couleur="rouge" utilise="0" pioche="0"/>
+      <disque id="blanc" couleur="blanc" utilise="0" pioche="0"/>
+      <disque id="gris1" couleur="gris" utilise="0" pioche="0"/>
+      <disque id="gris2" couleur="gris" utilise="0" pioche="0"/>
+      <disque id="violet1" couleur="violet" utilise="0" pioche="0"/>
+      <disque id="violet2" couleur="violet" utilise="0" pioche="0"/>
+    </disques>
+    <cubes dernier="violet">
+      <cube id="violet" utilise="5"/>
+      <cube id="blanc" utilise="2"/>
+    </cubes>
+  </partie>
+</parties>
