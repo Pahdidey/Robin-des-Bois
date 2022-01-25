@@ -1,0 +1,688 @@
+// Couleurs
+
+@C1 : #218c74;
+
+@Cwh : #fff;
+@Cbl : #1e272e;
+
+@Cgclair : #f5f6fa;
+
+@Cerr : #c0392b;
+@Clink : #2980b9;
+
+
+@vert : #27ae60;
+@jaune : #f1c40f;
+@bleu : #2980b9;
+@rouge : #c0392b;
+@turquoise : #00cec9;
+@blanc : #bdc3c7;
+@gris : #95a5a6;
+@violet : #9b59b6;
+
+
+
+
+
+// Media Query
+
+@extrasmall : ~"only screen and (max-width: 480px)";
+@small : ~"only screen and (max-width: 768px)";
+@medium : ~"only screen and (max-width: 992px)";
+
+
+
+
+// Styles généraux
+
+* {
+	margin: 0;
+	padding: 0;
+  	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 50px;
+	line-height: 50px;
+	margin-bottom: 15px;
+	font-weight: 600;
+	@media @small {
+		font-size: 40px;
+		line-height: 46px;
+	}
+	@media @extrasmall {
+		font-size: 30px;
+		line-height: 36px;
+	}
+}
+
+h2 {
+	font-size: 24px;
+	line-height: 24px;
+	margin-bottom: 15px;
+	font-weight: 600;
+}
+
+p {
+	font-size: 16px;
+	line-height: 22px;
+	margin-bottom: 15px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	strong {
+		font-weight: 600;
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.smaller {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.invisible, .hide, .hidden {
+	position: absolute !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	border: 0 !important;
+	clip: rect(0,0,0,0) !important;
+	-webkit-clip-path: circle(0) !important;
+	clip-path: circle(0) !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	white-space: nowrap !important;
+}
+
+a {
+	color: @Clink;
+	&:hover {
+		color: @C1;
+	}
+	&:focus {
+		color: @Cerr;
+	}
+}
+
+.button, button {
+	color: @Cbl;
+	border-radius: 5px;
+	text-decoration: none;
+	padding: 10px 20px;
+	text-align: center;
+	border: 1px solid @Cbl;
+	display: inline-block;
+	background: transparent;
+	&:hover {
+		transition: all 0.5s ease;
+		background: @C1;
+		color: @Cwh;
+		border-color: @C1;	
+	}
+	&:focus {
+		background: @Cbl;
+		color: @Cwh;
+		border-color: @Cbl;
+	}
+}
+
+.actions {
+	margin-top: 20px;
+	a {
+		@media @extrasmall {
+			display: block;
+			margin-bottom: 10px;
+			width: 100%;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+.margin-bottom {
+	margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+// Modal
+
+.modal {
+	display: none; 
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	overflow: auto;
+	.overlay {
+		position: fixed;
+		z-index: 300;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(0,0,0,.8);
+	}
+	.content {
+		background: @Cwh;
+		padding: 20px;
+		position: relative;
+		z-index: 400;
+		width: 80%;
+		max-width: 920px;
+		margin: 100px auto;
+		animation-name: modalbox;
+		animation-duration: .4s;
+		animation-timing-function: cubic-bezier(0,0,.3,1.6);
+		h1, h2, h3 {
+			font-size: 26px;
+			line-height: 30px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+	}
+}
+
+@keyframes modalbox {
+	0% {
+		top: -250px; 
+	    opacity: 0;
+	}
+	100% {
+	    top: 0; 
+	    opacity: 1;
+	}
+}
+
+
+
+
+
+
+
+
+
+// Form
+
+.mandatory {
+	color: @Cerr;
+}
+
+form {
+	> div {
+		padding-bottom: 20px;
+		&:last-child {
+			padding-bottom: 0;
+		}
+		input {
+			border: 1px solid rgba(0,0,0,0.4);
+			width: 100%;
+			padding: 15px;
+			border-radius: 5px;
+			font-size: 14px;
+			&[type="checkbox"] {
+				width: auto;
+			    height: 16px;
+			    width: 16px;
+			    padding: 0;
+			    border-radius: 0;
+			    background: #fff;
+			    border: 1px solid #202020;
+			    transition: all .2s linear;
+			    display: inline-block;
+			    vertical-align: -3px;
+			    cursor: pointer;
+				&:checked {
+				    outline: 0;
+				    border-color: @C1;
+				    background-color: @C1;
+				}
+				& + label {
+					display: inline-block;
+				    width: auto;
+				    cursor: pointer;
+				    margin-left: 5px;
+				    margin-bottom: 15px;
+				}
+			}
+		}
+		label {
+			font-size: 16px;
+			margin-bottom: 10px;
+		    display: block;
+		    span {
+		    	margin-top: 5px;
+	    		display: block;
+	    		&.mandatory {
+	    			display: inline;
+	    		}
+		    }
+		}
+		.soft {
+			label {
+				color: @gris;
+			}
+		}
+	}
+	p {
+		margin-bottom: 5px;
+	}
+	button {
+		cursor: pointer;
+		margin: 0 auto;
+    	display: block;
+    	font-size: 16px;
+    	text-transform: uppercase;
+		border-width: 2px;
+		padding: 12px 20px;
+	}
+}
+
+
+
+
+
+
+// Notification
+
+#toast {
+	opacity: 0;
+	background: rgba(0,0,0,.85);
+	color: @Cwh;
+    max-width: 400px;
+    width: auto;
+    text-align: center;
+    padding: 15px 20px;
+    margin: auto;
+	border-radius: 5px;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 10px;
+    animation-name: toastbox;
+	animation-duration: 5s;
+}
+
+@keyframes toastbox {
+  	0% {
+    	top: -100px; 
+    	opacity: 0;
+  	}
+  	20% {
+    	top: 10px; 
+    	opacity: 1;
+  	}
+  	90% {
+    	opacity: 1;
+  	}
+  	100% {
+    	opacity: 0;
+  	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Styles page
+
+html, body {
+	height: 100%;
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	color: @Cbl;
+}
+
+
+.structure {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+
+body {
+	header {
+		.structure;
+		padding: 30px;
+		text-align: center;
+		@media @small {
+			padding: 20px;
+		}
+		.actions {
+			margin-top: 30px;
+			.button {
+				text-transform: uppercase;
+				border-width: 2px;
+				padding: 12px 20px;
+			}
+		}
+		.participants {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-top: 30px;
+			> div {
+				max-width: 175px;
+				text-align: center;
+				padding: 20px;
+				&.robin {
+					img {
+						background: @vert;
+					}
+				}
+				&.jean {
+					img {
+						background: @bleu;
+					}
+				}
+				&.marianne {
+					img {
+						background: @jaune;
+					}
+				}
+				&.will {
+					img {
+						background: @turquoise;
+					}
+				}
+				img {
+					display: block;
+					background: @Cgclair;
+				    margin: 0 auto;
+				    border-radius: 100%;
+				    padding: 10px;
+				}
+				p {
+					font-size: 18px;
+					margin-top: 10px;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+	footer {
+		.structure;
+		padding: 30px;
+		text-align: center;
+		@media @small {
+			padding: 20px;
+		}
+	}
+	main {
+		section {
+			.structure;
+			padding: 30px;
+			@media @small {
+				padding: 20px;
+			}
+			&#actions, &#combats {
+				padding: 50px;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				@media @small {
+					padding: 20px;
+				}
+				> div {
+					figure {
+						max-width: 280px;
+						margin: 0 auto;
+						@media @small {
+							padding: 0 20px;
+						}
+					}
+					.actions {
+						> a.button {
+							margin-right: 10px;
+							@media @extrasmall {
+								margin-right: 0;
+							}
+							&:last-child {
+								margin-right: 0;
+							}
+						}
+					}
+					&:first-child {
+						text-align: center;
+						width: 40%;
+						@media @small {
+							width: 100%;
+							margin-bottom: 30px;
+						}
+						figure {
+							transform: rotate(10deg);
+						}
+					}
+					&:last-child {
+						width: 60%;
+						@media @small {
+							width: 100%;
+						}
+					}
+				}
+			}
+			&#actions {
+				background: #f2f9fb;
+				margin-bottom: 30px;
+				@media @small {
+					margin-bottom: 0;
+				}
+				> div {
+					&:first-child {
+						padding-right: 30px;
+						@media @small {
+							padding-right: 0;
+						}
+					}
+				}
+			}
+			&#combats {
+				background: #f5fbf1;
+				> div {
+					&:first-child {
+						order: 2;
+						padding-left: 30px;
+						@media @small {
+							order: 1;
+							padding-left: 0;
+						}
+						figure {
+							transform: rotate(-10deg);
+						}
+					}
+					&:last-child {
+						@media @small {
+							order: 2;
+						}
+					}
+				}
+			}
+			ul {
+				&.cubes {
+					margin-top: 20px;
+					li {
+						display: inline-block;
+						margin: 0 3px;
+						&.violet {
+							&:before {
+								background: @violet;
+							}
+						}
+						&.blanc {
+							&:before {
+								background: @blanc;
+							}
+						}
+						&:before {
+							content: "";
+							height: 20px;
+							width: 20px;
+							background: @C1;
+							display: block;
+						}
+					}
+				}
+				&.disques {
+					margin-top: 20px;
+					li {
+						display: inline-block;
+						transform: rotate(45deg);
+						margin: 0 5px;
+						&.vert, &.robin {
+							&:before {
+								background: @vert;
+							}
+						}
+						&.jaune, &.marianne {
+							&:before {
+								background: @jaune;
+							}
+						}
+						&.bleu, &.jean {
+							&:before {
+								background: @bleu;
+							}
+						}
+						&.rouge {
+							&:before {
+								background: @rouge;
+							}
+						}
+						&.turquoise, &.will {
+							&:before {
+								background: @turquoise;
+							}
+						}
+						&.blanc {
+							&:before {
+								background: @blanc;
+							}
+						}
+						&.gris, &.gris1, &.gris2 {
+							&:before {
+								background: @gris;
+							}
+						}
+						&.violet, &.violet1, &.violet2 {
+							&:before {
+								background: @violet;
+							}
+						}
+						&:before {
+							content: "";
+							height: 25px;
+							width: 25px;
+							background: @C1;
+							display: block;
+							border-radius: 15px 10px;
+						}
+					}
+				}
+			}
+			span {
+				&.cube {
+					display: inline-block;
+					&.violet {
+						&:before {
+							background: @violet;
+						}
+					}
+					&.blanc {
+						&:before {
+							background: @blanc;
+						}
+					}
+					&:before {
+						content: "";
+						height: 20px;
+						width: 20px;
+						background: @C1;
+						display: block;
+					}
+				}
+				&.disque {
+					display: inline-block;
+					transform: rotate(45deg);
+					margin: 0 5px;
+					&.vert, &.robin {
+						&:before {
+							background: @vert;
+						}
+					}
+					&.jaune, &.marianne {
+						&:before {
+							background: @jaune;
+						}
+					}
+					&.bleu, &.jean {
+						&:before {
+							background: @bleu;
+						}
+					}
+					&.rouge {
+						&:before {
+							background: @rouge;
+						}
+					}
+					&.turquoise, &.will {
+						&:before {
+							background: @turquoise;
+						}
+					}
+					&.blanc {
+						&:before {
+							background: @blanc;
+						}
+					}
+					&.gris, &.gris1, &.gris2 {
+						&:before {
+							background: @gris;
+						}
+					}
+					&.violet, &.violet1, &.violet2 {
+						&:before {
+							background: @violet;
+						}
+					}
+					&:before {
+						content: "";
+						height: 25px;
+						width: 25px;
+						background: @C1;
+						display: block;
+						border-radius: 15px 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
